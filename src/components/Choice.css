@@ -1,6 +1,6 @@
 .choice{
   background-color: #F0932B;
-  margin: 20px 10px 0 0;
+  margin: 10px 10px 0 0;
   padding: 7px 12px;
   color: white;
   border-radius: 50px;
@@ -27,7 +27,7 @@
 
 .popup{
   position: absolute;
-  margin-top: 20px;
+  margin-top: 10px;
   color: white;
   display: none;
   background-color: green;
