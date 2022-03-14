@@ -13,7 +13,7 @@ function Choice(props){
 
     setTimeout(function(){
       popup.style.display = "none"
-    }, 1250)
+    }, 1500)
   }
 
   return (
