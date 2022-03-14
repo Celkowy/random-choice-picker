@@ -1,0 +1,11 @@
+.input{
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.choiceWrapper{
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}

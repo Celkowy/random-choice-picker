@@ -1,0 +1,36 @@
+.choice{
+  background-color: #F0932B;
+  margin: 20px 10px 0 0;
+  padding: 7px 12px;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform .1s;
+}
+
+.choice.highlight{
+  background-color: #981003;
+}
+
+.choice:hover{
+  transform: scale(1.05);
+}
+
+.choice:active{
+  transform: scale(1);
+}
+
+.popupWrapper{
+ display: flex;
+ justify-content: center;
+}
+
+.popup{
+  position: absolute;
+  margin-top: 20px;
+  color: white;
+  display: none;
+  background-color: green;
+  padding: 7px 12px;
+  border-radius: 50px;
+}
