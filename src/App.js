@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     const listener = window.addEventListener('keydown', event => {
-      if(event.key == "Enter"){
+      if(event.key === "Enter"){
         random()
       }
     })
@@ -15,7 +15,7 @@ function App() {
     return () => {
       window.removeEventListener(listener)
     }
-  }, [])
+  })
 
   function randomChoice(){
     const choiceList = document.querySelectorAll(".choice")
