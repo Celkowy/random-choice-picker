@@ -15,7 +15,7 @@ function App() {
     return () => {
       window.removeEventListener("keydown", listener)
     }
-  }, [])
+  })
 
   function randomChoice(){
     const choiceList = document.querySelectorAll(".choice")
