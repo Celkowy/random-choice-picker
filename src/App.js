@@ -19,7 +19,7 @@ function App() {
 
   function randomChoice(){
     const choiceList = document.querySelectorAll(".choice")
-    return choiceList[Math.floor(Math.random() *choiceList.length)]
+    return choiceList[Math.floor(Math.random() * choiceList.length)]
   }
 
   function highlightAnimation(){
