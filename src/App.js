@@ -1,66 +1,65 @@
-import './App.css';
+import './App.css'
 import Container from './components/Container.js'
 import { useEffect } from 'react'
 
 function App() {
-  let times = 25;
+  let times = 25
 
   useEffect(() => {
     const listener = window.addEventListener('keydown', event => {
-      if(event.key === "Enter"){
+      if (event.key === 'Enter') {
         random()
       }
     })
 
     return () => {
-      window.removeEventListener("keydown", listener)
+      window.removeEventListener('keydown', listener)
     }
   })
 
-  function randomChoice(){
-    const choiceList = document.querySelectorAll(".choice")
+  function randomChoice() {
+    const choiceList = document.querySelectorAll('.choice')
     return choiceList[Math.floor(Math.random() * choiceList.length)]
   }
 
-  function highlightAnimation(){
-    const choiceList = document.querySelectorAll(".choice")
-    choiceList.forEach(choice =>{
-      setTimeout(()=>{
-        choice.classList.add("highlight")
-      }, times+=75)
+  function highlightAnimation() {
+    const choiceList = document.querySelectorAll('.choice')
+    choiceList.forEach(choice => {
+      setTimeout(() => {
+        choice.classList.add('highlight')
+      }, (times += 50))
     })
 
-    choiceList.forEach(choice =>{
-      setTimeout(()=>{
-        choice.classList.remove("highlight")
-      }, times+=75)
-    })
-  }
-
-  function clearChoices(){
-    const choiceList = document.querySelectorAll(".choice")
-    choiceList.forEach(choice =>{
-        choice.classList.remove("highlight")
+    choiceList.forEach(choice => {
+      setTimeout(() => {
+        choice.classList.remove('highlight')
+      }, (times += 50))
     })
   }
 
-  function random(){
+  function clearChoices() {
+    const choiceList = document.querySelectorAll('.choice')
+    choiceList.forEach(choice => {
+      choice.classList.remove('highlight')
+    })
+  }
+
+  function random() {
     clearChoices()
     highlightAnimation()
     const choice = randomChoice()
-    setTimeout(()=>{
-      choice.classList.add("highlight")
+    setTimeout(() => {
+      choice.classList.add('highlight')
     }, times)
-
   }
 
   return (
     <>
-    <div className='container'>
-    <Container/>
-    </div>
+      <div className="container">
+        <Container />
+      </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

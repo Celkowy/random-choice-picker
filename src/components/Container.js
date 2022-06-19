@@ -1,13 +1,13 @@
-import ContainerTop from "./ContainerTop";
+import ContainerTop from './ContainerTop'
 import Input from './Input.js'
 
-function Container(){
+function Container() {
   return (
     <>
-    <ContainerTop/>
-    <Input/>
+      <ContainerTop />
+      <Input />
     </>
-  );
+  )
 }
 
-export default Container;
+export default Container
